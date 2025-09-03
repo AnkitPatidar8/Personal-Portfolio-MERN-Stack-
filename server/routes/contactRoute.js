@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
     // 📩 Send email with the contact data
     const mailOptions = {
       from: process.env.SMTP_USER,
-      to: process.env.SMTP_PASS, // You’ll receive the message on your Gmail
+      to: process.env.TO_EMAIL, // You’ll receive the message on your Gmail
       subject: `📬 New Contact Form Submission: ${subject}`,
       html: `
         <h2>New Contact Submission</h2>
