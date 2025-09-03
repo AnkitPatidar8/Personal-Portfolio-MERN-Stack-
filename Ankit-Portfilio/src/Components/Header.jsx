@@ -22,11 +22,13 @@ export default function Header() {
         to="/admin">
         <button className="bg-yellow-400 px-4 py-1 rounded-full text-black transition-transform duration-300 hover:scale-110">Admin</button>
         </Link> */}
-       <a
-       href="/resume.pdf"
-       download="Ankit_Patidar_Resume.pdf"
-       className="inline-block px-6  text-white rounded-lg shadow  transition"
->        <button className="bg-green-600 hover:bg-green-600 px-4 py-1 rounded-full text-black transition-transform duration-300 hover:scale-110">Get Resume  </button>
+      <a
+  href="/images/resume.pdf"
+  download="Ankit_Patidar_Resume.pdf"
+>
+  <button className="bg-green-600 hover:bg-green-600 px-4 py-1 rounded-full text-black transition-transform duration-300 hover:scale-110">
+    Get Resume
+  </button>
 </a>
        
       </div>
