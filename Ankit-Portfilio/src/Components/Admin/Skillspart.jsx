@@ -188,7 +188,7 @@ export default Skillspart;
 // import Swal from "sweetalert2";
 // import axios from "axios";
 // import Layout from "./Layout";
-
+ 
 // const SKILLS_API = "http://localhost:5000/api/skills";
 
 // const Skillspart = () => {

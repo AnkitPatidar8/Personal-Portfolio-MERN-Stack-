@@ -130,8 +130,8 @@ const About = () => {
     const fetchData = async () => {
       try {
         const [eduRes, expRes] = await Promise.all([
-          axios.get(`${import.meta.env.VITE_SERVERURL}/api/about/education`),
-          axios.get(`${import.meta.env.VITE_SERVERURL}/api/about/experience`),
+          axios.get(`https://personal-portfolio-mern-stack.vercel.app/api/about/education`),
+          axios.get(`https://personal-portfolio-mern-stack.vercel.app/api/about/experience`),
         ]);
 
         setEducation(eduRes.data);
