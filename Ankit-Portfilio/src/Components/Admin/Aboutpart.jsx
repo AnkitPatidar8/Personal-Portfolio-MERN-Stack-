@@ -698,7 +698,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
 import axios from "axios";
 
-const API_BASE = `${import.meta.env.VITE_SERVERURL}/api/about`; // apna backend URL
+const API_BASE = `${import.meta.env.VITE_SERVERURL}api/about`; // apna backend URL
 
 const Aboutpart = () => {
   const [education, setEducation] = useState([]);
@@ -720,8 +720,8 @@ const Aboutpart = () => {
     const fetchData = async () => {
       try {
         const [eduRes, expRes] = await Promise.all([
-          axios.get(`${API_BASE}/education`),
-          axios.get(`${API_BASE}/experience`),
+          axios.get(`${API_BASE}education`),
+          axios.get(`${API_BASE}experience`),
         ]);
         setEducation(eduRes.data);
         setExperience(expRes.data);
@@ -737,11 +737,11 @@ const Aboutpart = () => {
     e.preventDefault();
     try {
       if (editEduId) {
-        const res = await axios.put(`${API_BASE}/education/${editEduId}`, eduForm);
+        const res = await axios.put(`${API_BASE}education/${editEduId}`, eduForm);
         setEducation(education.map((edu) => (edu._id === editEduId ? res.data : edu)));
         setEditEduId(null);
       } else {
-        const res = await axios.post(`${API_BASE}/education`, eduForm);
+        const res = await axios.post(`${API_BASE}education`, eduForm);
         setEducation([...education, res.data]);
       }
       setEduForm({ title: "", college: "", year: "" });
@@ -753,7 +753,7 @@ const Aboutpart = () => {
   // Delete Education
   const handleDeleteEdu = async (id) => {
     try {
-      await axios.delete(`${API_BASE}/education/${id}`);
+      await axios.delete(`${API_BASE}education/${id}`);
       setEducation(education.filter((edu) => edu._id !== id));
     } catch (err) {
       console.error("Error deleting education:", err);
@@ -776,11 +776,11 @@ const Aboutpart = () => {
       };
 
       if (editExpId) {
-        const res = await axios.put(`${API_BASE}/experience/${editExpId}`, payload);
+        const res = await axios.put(`${API_BASE}experience/${editExpId}`, payload);
         setExperience(experience.map((exp) => (exp._id === editExpId ? res.data : exp)));
         setEditExpId(null);
       } else {
-        const res = await axios.post(`${API_BASE}/experience`, payload);
+        const res = await axios.post(`${API_BASE}experience`, payload);
         setExperience([...experience, res.data]);
       }
       setExpForm({ title: "", company: "", duration: "", points: "" });
@@ -792,7 +792,7 @@ const Aboutpart = () => {
   // Delete Experience
   const handleDeleteExp = async (id) => {
     try {
-      await axios.delete(`${API_BASE}/experience/${id}`);
+      await axios.delete(`${API_BASE}experience/${id}`);
       setExperience(experience.filter((exp) => exp._id !== id));
     } catch (err) {
       console.error("Error deleting experience:", err);

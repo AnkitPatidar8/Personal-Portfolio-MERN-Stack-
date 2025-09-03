@@ -42,7 +42,7 @@ const Skillspart = () => {
     e.preventDefault();
     try {
       if (isEditing) {
-        await axios.put(`${SKILLS_API}/${editId}`, formData);
+        await axios.put(`${SKILLS_API}${editId}`, formData);
         setSkills((prev) =>
           prev.map((s) => (s._id === editId ? { ...formData, _id: editId } : s))
         );
@@ -75,7 +75,7 @@ const Skillspart = () => {
     if (!confirm.isConfirmed) return;
 
     try {
-      await axios.delete(`${SKILLS_API}/${id}`);
+      await axios.delete(`${SKILLS_API}${id}`);
       setSkills((prev) => prev.filter((s) => s._id !== id));
       Swal.fire("Deleted!", "Skill has been removed.", "success");
     } catch (err) {
