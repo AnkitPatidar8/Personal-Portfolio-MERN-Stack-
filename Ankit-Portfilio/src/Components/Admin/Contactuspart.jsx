@@ -114,7 +114,7 @@ const Contactuspart = () => {
     if (!confirm.isConfirmed) return;
 
     try {
-      await fetch(`${CONTACT_API}/${id}`, { method: "DELETE" });
+      await fetch(`${CONTACT_API}${id}`, { method: "DELETE" });
       setContactData((prev) => prev.filter((c) => c._id !== id));
       Swal.fire("Deleted!", "Message has been removed.", "success");
     } catch (err) {

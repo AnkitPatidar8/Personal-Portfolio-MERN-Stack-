@@ -6,7 +6,7 @@
 
 // // middleware
 // const corsOptions = {
-//   origin: "https://ankit-patidar-portfolio.netlify.app",
+//   origin: "https://ankit-patidar-portfolio.netlify.app/",
 //   methods: ["GET", "POST", "PUT", "DELETE"],
 //   credentials: true,
 // };
@@ -54,7 +54,7 @@ const app = express();
 
 // CORS setup
 const corsOptions = {
-  origin: "https://ankit-patidar-portfolio.netlify.app",
+  origin: "https://ankit-patidar-portfolio.netlify.app/",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
