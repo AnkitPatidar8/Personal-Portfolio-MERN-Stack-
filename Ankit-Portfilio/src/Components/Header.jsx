@@ -23,7 +23,7 @@ export default function Header() {
         <button className="bg-yellow-400 px-4 py-1 rounded-full text-black transition-transform duration-300 hover:scale-110">Admin</button>
         </Link> */}
       <a
-  href="/images/resume.pdf"
+  href="/patidarre.pdf"
   download="Ankit_Patidar_Resume.pdf"
 >
   <button className="bg-green-600 hover:bg-green-600 px-4 py-1 rounded-full text-black transition-transform duration-300 hover:scale-110">
