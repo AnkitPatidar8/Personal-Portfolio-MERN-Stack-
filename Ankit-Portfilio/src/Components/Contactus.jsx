@@ -36,7 +36,7 @@ const Contactus = () => {
     setLoading(true);
 
     try {
-      await axios.post(`${import.meta.env.VITE_SERVERURL}/api/contacts`, form);
+      await axios.post(`${import.meta.env.VITE_SERVERURL}api/contacts`, form);
 
       Swal.fire({
         title: "Success 🎉",
