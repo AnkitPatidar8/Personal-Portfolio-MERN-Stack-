@@ -54,7 +54,7 @@ const app = express();
 
 // CORS setup
 const corsOptions = {
-  origin: "https://ankit-patidar-portfolio.netlify.app/",
+  origin: "https://ankit-patidar-portfolio.netlify.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
@@ -64,16 +64,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // routes
 const contactRoute = require("./routes/contactRoute");
-app.use("api/contacts", contactRoute);
+app.use("/api/contacts", contactRoute);
 
 const adminRoute = require("./routes/adminRoute");
-app.use("api/admin", adminRoute);
+app.use("/api/admin", adminRoute);
 
 const skillRoute = require("./routes/skillRoute");
-app.use("api/skills", skillRoute);
+app.use("/api/skills", skillRoute);
 
 const aboutRoutes = require("./routes/aboutRoutes");
-app.use("api/about", aboutRoutes);
+app.use("/api/about", aboutRoutes);
 
 // MongoDB connect
 mongoose
