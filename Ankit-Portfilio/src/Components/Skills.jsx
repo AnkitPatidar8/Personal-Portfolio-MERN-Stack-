@@ -11,7 +11,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const { data } = await axios.get(`${SKILLS_API}/api/skills`);
+        const { data } = await axios.get(`${SKILLS_API}api/skills`);
         setTechSkills(data);
       } catch (err) {
         console.error("Error fetching skills:", err);
