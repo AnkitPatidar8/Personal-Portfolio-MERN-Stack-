@@ -4,10 +4,17 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require("dotenv").config()
 
-// middelware 
-app.use(cors())
-app.use(express.json())
+// middleware
+const corsOptions = {
+  origin: "https://ankit-patidar-portfolio.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 // routes 
 const contactRoute = require("./routes/contactRoute")
 app.use("/api/contacts", contactRoute )
