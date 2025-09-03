@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+/* Tailwind custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #14b8a6; /* Tailwind's teal-400 */
+  border-radius: 20px;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+.transform-style {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+.hover\:rotate-y-180:hover {
+  transform: rotateY(180deg);
+}
+
