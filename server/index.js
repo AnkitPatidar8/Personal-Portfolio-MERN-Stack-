@@ -59,6 +59,7 @@ const corsOptions = {
   credentials: true,
 };
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // preflight
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
