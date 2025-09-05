@@ -71,7 +71,7 @@ const adminRoute = require("./routes/adminRoute");
 app.use("/api/admin", adminRoute);
 
 const skillRoute = require("./routes/skillRoute");
-app.use("/api/skills", skillRoute);
+app.use("api/skills", skillRoute);
 
 const aboutRoutes = require("./routes/aboutRoutes");
 app.use("/api/about", aboutRoutes);
