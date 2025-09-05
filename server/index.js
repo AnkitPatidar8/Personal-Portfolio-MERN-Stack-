@@ -46,20 +46,76 @@
 //   });
 
 
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const cors = require("cors");
+
+// const app = express();
+
+// // CORS setup
+// const corsOptions = {
+//   origin: "https://ankit-patidar-portfolio.netlify.app",
+//   methods: ["GET", "POST", "PUT", "DELETE","OPTIONS"],
+//   credentials: true,
+// };
+// app.use(cors(corsOptions));
+// app.options("*", cors(corsOptions)); // preflight
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+
+// // routes
+// const contactRoute = require("./routes/contactRoute");
+// app.use("/api/contacts", contactRoute);
+
+// const adminRoute = require("./routes/adminRoute");
+// app.use("/api/admin", adminRoute);
+
+// const skillRoute = require("./routes/skillRoute");
+// app.use("/api/skills", skillRoute);
+
+// const aboutRoutes = require("./routes/aboutRoutes");
+// app.use("/api/about", aboutRoutes);
+
+// // MongoDB connect
+// mongoose
+//   .connect(process.env.MONGO_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => console.log("mongodb connected"))
+//   .catch((err) => console.log(`something wrong ${err}`));
+
+// // 👉 IMPORTANT: don't use app.listen in Vercel
+// module.exports = app;
+
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
 
-// CORS setup
+// ✅ CORS setup with multiple allowed origins
+const allowedOrigins = [
+  "https://ankit-patidar-portfolio.netlify.app", // portfolio site
+  "http://localhost:5173" // local dev
+  // agar admin panel alag Netlify par deploy hai to uska URL bhi yaha add karo
+];
+
 const corsOptions = {
-  origin: "https://ankit-patidar-portfolio.netlify.app",
-  methods: ["GET", "POST", "PUT", "DELETE","OPTIONS"],
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 };
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions)); // preflight
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
