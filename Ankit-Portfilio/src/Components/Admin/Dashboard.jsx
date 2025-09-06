@@ -23,7 +23,7 @@ const Dashboard = () => {
   // Axios instance with token
   const token = localStorage.getItem("token");
   const axiosInstance = axios.create({
-    baseURL: `${import.meta.env.VITE_SERVERURL}api`,
+    baseURL: "http://localhost:5000/api",
     headers: { Authorization: `Bearer ${token}` },
   });
 
@@ -49,7 +49,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const { data } = await axios.get(`${import.meta.env.VITE_SERVERURL}api/contacts`);
+        const { data } = await axios.get("https://personal-portfolio-mern-stack.vercel.app/api/contacts");
         setContacts(data);
       } catch (err) {
         console.error(err);

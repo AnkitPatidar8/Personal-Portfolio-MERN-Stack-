@@ -9,8 +9,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.SMTP_USER, // ✅ lowercase "user"
-    pass: process.env.SMTP_PASS, // ✅ lowercase "pass"
+    user: process.env.USER, // ✅ lowercase "user"
+    pass: process.env.PASS, // ✅ lowercase "pass"
   },
 });
 
@@ -25,8 +25,8 @@ router.post("/", async (req, res) => {
 
     // 📩 Send email with the contact data
     const mailOptions = {
-      from: process.env.SMTP_USER,
-      to: process.env.TO_EMAIL, // You’ll receive the message on your Gmail
+      from: process.env.USER,
+      to: process.env.USER, // You’ll receive the message on your Gmail
       subject: `📬 New Contact Form Submission: ${subject}`,
       html: `
         <h2>New Contact Submission</h2>
@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
 
      // 3️⃣ Send THANK YOU email to USER
     const userMail = {
-      from: process.env.SMTP_USER,
+      from: process.env.USER,
       to: email,
       subject: "🙏 Thanks for Connecting With Us",
       html: `

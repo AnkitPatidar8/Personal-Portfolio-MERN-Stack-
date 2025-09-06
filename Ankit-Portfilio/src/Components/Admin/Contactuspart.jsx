@@ -84,7 +84,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "./Layout";
 import Swal from "sweetalert2";
 
-const CONTACT_API =  `${import.meta.env.VITE_SERVERURL}`;
+const CONTACT_API = "https://personal-portfolio-mern-stack.vercel.app/api/contacts";
 
 const Contactuspart = () => {
   const [contactData, setContactData] = useState([]);
@@ -114,7 +114,7 @@ const Contactuspart = () => {
     if (!confirm.isConfirmed) return;
 
     try {
-      await fetch(`${CONTACT_API}${id}`, { method: "DELETE" });
+      await fetch(`${CONTACT_API}/${id}`, { method: "DELETE" });
       setContactData((prev) => prev.filter((c) => c._id !== id));
       Swal.fire("Deleted!", "Message has been removed.", "success");
     } catch (err) {

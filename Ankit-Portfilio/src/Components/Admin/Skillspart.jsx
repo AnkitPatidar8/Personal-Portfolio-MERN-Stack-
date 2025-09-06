@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import Layout from "./Layout"; // apna layout import karo
 
-const SKILLS_API = `https://personal-portfolio-mern-stack.vercel.app/api/skills`;
+const SKILLS_API = "https://personal-portfolio-mern-stack.vercel.app/api/skills";
 
 const Skillspart = () => {
   const [skills, setSkills] = useState([]);
@@ -42,7 +42,7 @@ const Skillspart = () => {
     e.preventDefault();
     try {
       if (isEditing) {
-        await axios.put(`${SKILLS_API}${editId}`, formData);
+        await axios.put(`${SKILLS_API}/${editId}`, formData);
         setSkills((prev) =>
           prev.map((s) => (s._id === editId ? { ...formData, _id: editId } : s))
         );
@@ -75,7 +75,7 @@ const Skillspart = () => {
     if (!confirm.isConfirmed) return;
 
     try {
-      await axios.delete(`${SKILLS_API}${id}`);
+      await axios.delete(`${SKILLS_API}/${id}`);
       setSkills((prev) => prev.filter((s) => s._id !== id));
       Swal.fire("Deleted!", "Skill has been removed.", "success");
     } catch (err) {
@@ -188,7 +188,7 @@ export default Skillspart;
 // import Swal from "sweetalert2";
 // import axios from "axios";
 // import Layout from "./Layout";
- 
+
 // const SKILLS_API = "http://localhost:5000/api/skills";
 
 // const Skillspart = () => {
