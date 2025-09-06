@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import Layout from "./Layout"; // apna layout import karo
 
-const SKILLS_API = "https://personal-portfolio-mern-stack.vercel.appapi/skills";
+const SKILLS_API = "https://personal-portfolio-mern-stack.vercel.app/api/skills";
 
 const Skillspart = () => {
   const [skills, setSkills] = useState([]);

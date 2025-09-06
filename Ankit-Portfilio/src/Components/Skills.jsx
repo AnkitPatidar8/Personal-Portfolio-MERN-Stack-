@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const SKILLS_API = "https://personal-portfolio-mern-stack.vercel.app/";
+const SKILLS_API = "https://personal-portfolio-mern-stack.vercel.app";
 
 const Skills = () => {
   const [techSkills, setTechSkills] = useState([]);
