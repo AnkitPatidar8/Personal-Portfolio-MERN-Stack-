@@ -109,24 +109,52 @@ const Projects = () => {
                 {/* Links */}
                 <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
                   {project.liveDemoLink && (
-                    <a
-                      href={project.liveDemoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-lg text-sm sm:text-base font-semibold bg-gradient-to-r from-yellow-500 to-amber-200 text-gray-800 hover:opacity-90 transition"
-                    >
-                      Live Demo
-                    </a>
+             <a
+  href={project.liveDemoLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-4 py-2 rounded-xl text-sm sm:text-base font-semibold
+             bg-neutral-900 border border-cyan-400 text-cyan-400
+             hover:bg-cyan-400 hover:text-neutral-900
+             hover:shadow-[0_0_15px_rgba(34,211,238,0.7)]
+             transition duration-300 ease-in-out"
+>
+  Live Demo
+</a>
+//<a
+//  href={project.liveDemoLink}
+//  target="_blank"
+//  rel="noopener noreferrer"
+//  className="relative px-4 py-2 text-sm sm:text-base font-semibold
+//             text-white hover:text-amber-400 transition-colors
+//             after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+//             after:w-0 after:bg-amber-400 after:transition-all 
+//             after:duration-300 hover:after:w-full"
+//  >
+//  Live Demo
+// </a>
+
+
+
+
+
+
+
+
                   )}
                   {project.githubLink && (
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-lg text-sm sm:text-base font-semibold bg-gradient-to-r from-yellow-500 to-amber-200 text-gray-800 hover:opacity-90 transition"
-                    >
-                      GitHub Repo
-                    </a>
+                     <a
+  href={project.githubLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-4 py-2 rounded-xl text-sm sm:text-base font-semibold
+             bg-neutral-900 border border-cyan-400 text-cyan-400
+             hover:bg-cyan-400 hover:text-neutral-900
+             hover:shadow-[0_0_15px_rgba(34,211,238,0.7)]
+             transition duration-300 ease-in-out"
+>
+  Github repo
+</a>
                   )}
                 </div>
               </div>

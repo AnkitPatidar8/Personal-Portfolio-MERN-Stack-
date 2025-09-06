@@ -438,14 +438,19 @@ const Contactus = () => {
 
             {/* 🔹 Loader show karna ya normal button */}
             <button
-              type="submit"
-              disabled={loading}
-              className={`col-span-1 sm:col-span-2 bg-gradient-to-r from-yellow-500 to-amber-200 text-gray-700 font-bold py-2 px-4 rounded w-full transition duration-300 ${
-                loading && "opacity-50 cursor-not-allowed"
-              }`}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
+  type="submit"
+  disabled={loading}
+  className={`col-span-1 sm:col-span-2 
+              bg-neutral-900 border border-cyan-400 text-cyan-400 font-bold 
+              py-2 px-4 rounded w-full transition duration-300 
+              hover:bg-cyan-400 hover:text-neutral-900 
+              hover:shadow-[0_0_15px_rgba(34,211,238,0.7)]
+              ${loading && "opacity-50 cursor-not-allowed shadow-none hover:shadow-none"}
+            `}
+>
+  {loading ? "Sending..." : "Send Message"}
+</button>
+
           </form>
         </div>
 

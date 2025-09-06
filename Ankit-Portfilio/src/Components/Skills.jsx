@@ -40,7 +40,7 @@ const Skills = () => {
                 <div className="absolute w-full h-full backface-hidden bg-neutral-800 rounded-xl flex items-center justify-evenly shadow-lg">
                   <img src={skill.image} alt={skill.name} className="w-36 h-36 object-contain" />
                   <div>
-                    <h1 className="text-xl font-bold bg-gradient-to-r from-yellow-500 to-amber-200 text-transparent bg-clip-text">
+                    <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-200 text-transparent bg-clip-text">
                       {skill.name}
                     </h1>
                     <p className="text-gray-400 text-base absolute bottom-0 right-4">
@@ -50,7 +50,7 @@ const Skills = () => {
                 </div>
                 {/* Back */}
                 <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-neutral-700 rounded-xl flex items-center justify-center shadow-lg">
-                  <p className="bg-gradient-to-r from-yellow-500 to-amber-200 text-transparent bg-clip-text text-sm font-semibold px-3">
+                  <p className="bg-gradient-to-r from-cyan-400 to-cyan-100 text-transparent bg-clip-text text-sm font-semibold px-3">
                     {skill.description}
                   </p>
                 </div>

@@ -156,7 +156,7 @@ const About = () => {
             I’m a passionate web developer based in India. I enjoy building web
             applications that are fast, beautiful, and user-friendly. My
             favorite stack is{" "}
-            <span className="bg-gradient-to-r from-yellow-500 to-amber-200 text-transparent bg-clip-text font-semibold ">
+            <span className="bg-gradient-to-r from-cyan-400 to-cyan-200 text-transparent bg-clip-text font-semibold ">
               MERN (MongoDB, Express, React, Node)
             </span>
             . I love learning new technologies and solving real-world problems
@@ -168,7 +168,7 @@ const About = () => {
         <div className="w-full max-w-6xl bg-neutral-900 px-4 sm:px-6 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 m-auto">
           {/* Education */}
           <div className="bg-neutral-800 p-6 rounded-xl shadow-xl">
-            <h2 className="text-2xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-200 text-transparent bg-clip-text mb-4">
+            <h2 className="text-2xl font-semibold bg-gradient-to-r from-cyan-400 to-cyan-200  text-transparent bg-clip-text mb-4">
               Education
             </h2>
             <div className="space-y-4">
@@ -195,7 +195,7 @@ const About = () => {
 
           {/* Experience */}
           <div className="bg-neutral-800 p-6 rounded-xl shadow-xl h-[360px] overflow-y-auto pr-3 custom-scrollbar">
-            <h2 className="text-2xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-200 text-transparent bg-clip-text mb-4">
+            <h2 className="text-2xl font-semibold bg-gradient-to-r from-cyan-400 to-cyan-200 text-transparent bg-clip-text mb-4">
               Experience
             </h2>
             <div className="space-y-4">
