@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.SMTP_USER, // ✅ lowercase "user"
-    pass: process.env.PASS, // ✅ lowercase "pass"
+    pass: process.env.SMTP_PASS, // ✅ lowercase "pass"
   },
 });
 
