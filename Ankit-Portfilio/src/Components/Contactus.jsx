@@ -36,7 +36,7 @@ const Contactus = () => {
     setLoading(true);
 
     try {
-      await axios.post("https://personal-portfolio-mern-stack.vercel.app/api/contacts", form);
+      await axios.post(`https://personal-portfolio-mern-stack.vercel.app/api/contacts`, form);
 
       Swal.fire({
         title: "Success 🎉",
