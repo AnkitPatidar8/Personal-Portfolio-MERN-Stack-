@@ -84,7 +84,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "./Layout";
 import Swal from "sweetalert2";
 
-const CONTACT_API =  `https://personal-portfolio-mern-stack.vercel.app`;
+const CONTACT_API =  `https://personal-portfolio-mern-stack.vercel.app/`;
 
 const Contactuspart = () => {
   const [contactData, setContactData] = useState([]);
