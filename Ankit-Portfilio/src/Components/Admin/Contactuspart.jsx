@@ -314,6 +314,7 @@ const Contactuspart = () => {
                 <th className="py-3 px-4 border border-neutral-600">Email</th>
                 <th className="py-3 px-4 border border-neutral-600">Subject</th>
                 <th className="py-3 px-4 border border-neutral-600">Mobile</th>
+                <th className="py-3 px-4 border border-neutral-600">massage</th>
                 <th className="py-3 px-4 border border-neutral-600">Date</th>
                 <th className="py-3 px-4 border border-neutral-600">Time</th>
                 <th className="py-3 px-4 border border-neutral-600 text-center">Actions</th>
@@ -330,6 +331,7 @@ const Contactuspart = () => {
                       <td className="py-2 px-4 border border-neutral-600">{contact.email}</td>
                       <td className="py-2 px-4 border border-neutral-600">{contact.subject}</td>
                       <td className="py-2 px-4 border border-neutral-600">{contact.mobile}</td>
+                      <td className="py-2 px-4 border border-neutral-600">{contact.massage}</td>
                       <td className="py-2 px-4 border border-neutral-600">
                         {createdAt.toLocaleDateString()}
                       </td>
